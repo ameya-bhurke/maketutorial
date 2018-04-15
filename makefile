@@ -1,2 +1,5 @@
-hellomake: hellomake.c hellomakefunc.c
-	gcc -o hellomake hellomake.c hellomakefunc.c -I.
+CC=gcc
+CFFLAGS=-I.
+
+hellomake: *.c
+	$(CC) -o hellomake hellomake.c hellomakefunc.c $(CFFLAGS)
